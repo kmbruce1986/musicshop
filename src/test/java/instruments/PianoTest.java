@@ -5,42 +5,43 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
-public class GuitarTest {
+public class PianoTest {
 
-    Guitar guitar;
+    Piano piano;
 
     @Before
     public void setUp() {
-        guitar = new Guitar("Gibson", "Wood", "Black", Type.STRING, 8);
+        piano = new Piano("Steinway & Sons", "Wood", "Pink", Type.STRING, "Baby");
     }
 
     @Test
     public void hasBrand() {
-        assertEquals("Gibson", guitar.getBrand());
+        assertEquals("Steinway & Sons", piano.getBrand());
     }
 
     @Test
     public void hasMaterial() {
-        assertEquals("Wood", guitar.getMaterial());
+        assertEquals("Wood", piano.getMaterial());
     }
 
     @Test
     public void hasColour() {
-        assertEquals("Black", guitar.getColour());
+        assertEquals("Pink", piano.getColour());
     }
 
     @Test
     public void hasType() {
-        assertEquals(Type.STRING, guitar.getType());
+        assertEquals(Type.STRING, piano.getType());
     }
 
     @Test
     public void hasNumberOfStrings() {
-        assertEquals(8, guitar.getNumberofStrings());
+        assertEquals("Baby", piano.getSize());
     }
 
     @Test
     public void canPlay() {
-        assertEquals("Strummin'", guitar.play());
+        assertEquals("Tinklin'", piano.play());
     }
+
 }
