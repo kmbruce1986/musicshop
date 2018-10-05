@@ -35,7 +35,7 @@ public class GuitarStringTest {
     }
 
     @Test
-    public void canGetType() {
+    public void canGetNote() {
         assertEquals(GuitarStringType.G, guitarString.getNote());
     }
 }
