@@ -11,7 +11,22 @@ public class TrumpetTest {
 
     @Before
     public void setUp() {
-        trumpet = new Trumpet("Yamaha", "Brass", "Brass", Type.BRASS, 5);
+        trumpet = new Trumpet(100.00, 500.00,"Yamaha", "Brass", "Brass", Type.BRASS, 5);
+    }
+
+    @Test
+    public void hasCostPrice() {
+        assertEquals(100.00, trumpet.getCostPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(500.00, trumpet.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(400.00, trumpet.markup(), 0.01);
     }
 
     @Test

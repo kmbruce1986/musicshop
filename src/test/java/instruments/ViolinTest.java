@@ -11,7 +11,22 @@ public class ViolinTest {
 
     @Before
     public void setUp() {
-        violin = new Violin("Stentor", "Wood", "Brown", Type.STRING, 10);
+        violin = new Violin(100.00, 300.00,"Stentor", "Wood", "Brown", Type.STRING, 10);
+    }
+
+    @Test
+    public void hasCostPrice() {
+        assertEquals(100.00, violin.getCostPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(300.00, violin.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(200.00, violin.markup(), 0.01);
     }
 
     @Test

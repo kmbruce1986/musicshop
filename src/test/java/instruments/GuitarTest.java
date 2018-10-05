@@ -11,7 +11,22 @@ public class GuitarTest {
 
     @Before
     public void setUp() {
-        guitar = new Guitar("Gibson", "Wood", "Black", Type.STRING, 8);
+        guitar = new Guitar(400.00, 1200.00,"Gibson", "Wood", "Black", Type.STRING, 8);
+    }
+
+    @Test
+    public void hasCostPrice() {
+        assertEquals(400.00, guitar.getCostPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(1200.00, guitar.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(800.00, guitar.markup(), 0.01);
     }
 
     @Test

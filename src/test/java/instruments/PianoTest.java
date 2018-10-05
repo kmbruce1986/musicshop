@@ -11,7 +11,22 @@ public class PianoTest {
 
     @Before
     public void setUp() {
-        piano = new Piano("Steinway & Sons", "Wood", "Pink", Type.STRING, "Baby");
+        piano = new Piano(1000.00, 4000.00,"Steinway & Sons", "Wood", "Pink", Type.STRING, "Baby");
+    }
+
+    @Test
+    public void hasCostPrice() {
+        assertEquals(1000.00, piano.getCostPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(4000.00, piano.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(3000.00, piano.markup(), 0.01);
     }
 
     @Test

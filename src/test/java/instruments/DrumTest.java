@@ -11,7 +11,22 @@ public class DrumTest {
 
     @Before
     public void setUp() {
-        drum = new Drum("Pearl", "Wood", "Black", Type.PERCUSSION, "Snare");
+        drum = new Drum(40.00, 100.00,"Pearl", "Wood", "Black", Type.PERCUSSION, "Snare");
+    }
+
+    @Test
+    public void hasCostPrice() {
+        assertEquals(40.00, drum.getCostPrice(), 0.01);
+    }
+
+    @Test
+    public void hasSellingPrice() {
+        assertEquals(100.00, drum.getSellingPrice(), 0.01);
+    }
+
+    @Test
+    public void canCalculateMarkup() {
+        assertEquals(60.00, drum.markup(), 0.01);
     }
 
     @Test

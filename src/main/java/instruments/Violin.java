@@ -1,13 +1,14 @@
 package instruments;
 
 import behaviours.IPlay;
+import behaviours.ISell;
 
-public class Violin extends Instrument implements IPlay {
+public class Violin extends Instrument implements IPlay, ISell {
 
     private int size;
 
-    public Violin(String brand, String material, String colour, Type type, int size) {
-        super(brand, material, colour, type);
+    public Violin(Double costPrice, Double sellingPrice, String brand, String material, String colour, Type type, int size) {
+        super(costPrice, sellingPrice, brand, material, colour, type);
         this.size = size;
     }
 
@@ -17,5 +18,9 @@ public class Violin extends Instrument implements IPlay {
 
     public String play(){
         return "Cryin'";
+    }
+
+    public Double markup(){
+        return getSellingPrice() - getCostPrice();
     }
 }
