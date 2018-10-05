@@ -35,7 +35,7 @@ public class ViolinTest {
     }
 
     @Test
-    public void hasNumberOfStrings() {
+    public void hasSize() {
         assertEquals(10, violin.getSize());
     }
 

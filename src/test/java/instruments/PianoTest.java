@@ -35,7 +35,7 @@ public class PianoTest {
     }
 
     @Test
-    public void hasNumberOfStrings() {
+    public void hasSize() {
         assertEquals("Baby", piano.getSize());
     }
 
