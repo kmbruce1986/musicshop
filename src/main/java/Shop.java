@@ -26,4 +26,13 @@ public class Shop {
             }
         } this.stock.remove(foundItem);
     }
+
+    public Double calculateTotalPossibleProfit(){
+        Double profit = 0.00;
+        for (ISell item : this.stock){
+            Double itemprofit = item.markup();
+            profit += itemprofit;
+        }
+        return profit;
+    }
 }
