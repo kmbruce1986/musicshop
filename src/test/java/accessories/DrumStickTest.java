@@ -33,4 +33,9 @@ public class DrumStickTest {
     public void canGetMarkup() {
         assertEquals(16, drumStick.markup(), 0.01);
     }
+
+    @Test
+    public void canGetBrand() {
+        assertEquals("Pearl", drumStick.getBrand());
+    }
 }
